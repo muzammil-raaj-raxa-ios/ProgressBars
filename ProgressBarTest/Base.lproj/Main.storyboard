@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProgressBarTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hUg-3T-6g7">
+                                <rect key="frame" x="87.5" y="273.5" width="200" height="120"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ojq-KP-wM3" userLabel="Analog">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ILk-SC-kvc">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="rO1-xd-5rE"/>
+                                                </constraints>
+                                                <color key="progressTintColor" systemColor="systemRedColor"/>
+                                                <color key="trackTintColor" white="0.66666666666666663" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </progressView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3Q-oN-bxZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+                                                <color key="backgroundColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Start"/>
+                                                <connections>
+                                                    <action selector="analogStartBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AeB-h4-WNK"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="W3Q-oN-bxZ" secondAttribute="bottom" id="4U5-mD-J0W"/>
+                                            <constraint firstItem="ILk-SC-kvc" firstAttribute="top" secondItem="Ojq-KP-wM3" secondAttribute="top" id="7Hp-Am-veU"/>
+                                            <constraint firstItem="W3Q-oN-bxZ" firstAttribute="top" secondItem="Ojq-KP-wM3" secondAttribute="top" id="8Rt-fA-9ah"/>
+                                            <constraint firstItem="W3Q-oN-bxZ" firstAttribute="leading" secondItem="Ojq-KP-wM3" secondAttribute="leading" id="ApT-AC-L0O"/>
+                                            <constraint firstAttribute="width" constant="200" id="Tce-Br-KtX"/>
+                                            <constraint firstAttribute="trailing" secondItem="ILk-SC-kvc" secondAttribute="trailing" id="WHe-RL-Y4R"/>
+                                            <constraint firstAttribute="trailing" secondItem="W3Q-oN-bxZ" secondAttribute="trailing" id="ajd-nA-gZN"/>
+                                            <constraint firstItem="ILk-SC-kvc" firstAttribute="leading" secondItem="Ojq-KP-wM3" secondAttribute="leading" id="xoR-Jn-CLD"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YjE-AM-U2b" userLabel="Digital">
+                                        <rect key="frame" x="0.0" y="70" width="200" height="50"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3Ci-LO-J3r">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="6Bf-vF-wdp"/>
+                                                </constraints>
+                                                <color key="progressTintColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="trackTintColor" white="0.66666666669999997" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </progressView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J28-u6-nFq">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+                                                <color key="backgroundColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Start"/>
+                                                <connections>
+                                                    <action selector="digitalStartBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kca-Ud-DaR"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="J28-u6-nFq" firstAttribute="leading" secondItem="YjE-AM-U2b" secondAttribute="leading" id="FS8-TL-Tjv"/>
+                                            <constraint firstItem="J28-u6-nFq" firstAttribute="top" secondItem="YjE-AM-U2b" secondAttribute="top" id="XtF-OH-Uyz"/>
+                                            <constraint firstItem="3Ci-LO-J3r" firstAttribute="leading" secondItem="YjE-AM-U2b" secondAttribute="leading" id="fEn-zF-Ajp"/>
+                                            <constraint firstAttribute="bottom" secondItem="J28-u6-nFq" secondAttribute="bottom" id="iA3-Lu-JEy"/>
+                                            <constraint firstAttribute="trailing" secondItem="J28-u6-nFq" secondAttribute="trailing" id="iOB-Qb-HQO"/>
+                                            <constraint firstItem="3Ci-LO-J3r" firstAttribute="top" secondItem="YjE-AM-U2b" secondAttribute="top" id="kht-xI-BaG"/>
+                                            <constraint firstAttribute="width" constant="200" id="lzE-kp-8WP"/>
+                                            <constraint firstAttribute="trailing" secondItem="3Ci-LO-J3r" secondAttribute="trailing" id="oFF-tn-2Dy"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="pvF-nI-eBG"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hUg-3T-6g7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="E20-5a-8hw"/>
+                            <constraint firstItem="hUg-3T-6g7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sfD-Go-Aya"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="analogProgressBar" destination="ILk-SC-kvc" id="PQj-F3-TzT"/>
+                        <outlet property="digitalProgressBar" destination="3Ci-LO-J3r" id="cGe-aJ-rze"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
